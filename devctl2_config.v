@@ -20,16 +20,3 @@ module devctl2_config (
         end
     end
 Endmodule
-
-Explanation:
-	1. Inputs:
-		○ timeout_range: Specifies the range of the completion timeout (e.g., A, B, C, D).
-		○ timeout_value: Sets the specific timeout value within the selected range.
-	2. Outputs:
-		○ devctl2: A 16-bit register representing the Device Control 2 register.
-	3. Behavior:
-		○ On a reset, the devctl2 register is cleared to 0.
-		○ During normal operation, the timeout_range and timeout_value inputs are mapped to their respective fields in the register.
-	4. Mapping:
-		○ Bits [7:4] are used for the Completion Timeout Range.
-		○ Bits [3:0] are used for the Completion Timeout Value.
